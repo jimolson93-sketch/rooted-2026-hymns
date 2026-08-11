@@ -7,6 +7,11 @@
   const RELOAD_KEY='rooted-update-reload';
   let hadController=!!navigator.serviceWorker.controller;
 
+  function showVersion(version){
+    const label=document.getElementById('appVersion');
+    if(label&&version)label.textContent='Version '+version;
+  }
+
   if(sessionStorage.getItem(RELOAD_KEY)){
     setTimeout(function(){sessionStorage.removeItem(RELOAD_KEY);},5000);
   }
@@ -28,6 +33,7 @@
       if(!response.ok)return;
       const deployed=(await response.json()).version;
       if(!deployed)return;
+      showVersion(deployed);
 
       const known=localStorage.getItem(VERSION_KEY);
       if(!known){
