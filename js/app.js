@@ -3,6 +3,7 @@
 const hymns=window.ROOTED_HYMNS||[];
 const el={search:document.getElementById('searchInput'),indexBtn:document.getElementById('indexBtn'),allBtn:document.getElementById('showAllBtn'),settingsBtn:document.getElementById('settingsBtn'),drawer:document.getElementById('settingsDrawer'),slider:document.getElementById('fontSizeSlider'),display:document.getElementById('fontSizeDisplay'),minus:document.getElementById('fontDecreaseBtn'),plus:document.getElementById('fontIncreaseBtn'),index:document.getElementById('index'),hymns:document.getElementById('hymns')};
 let current=null, mode='idle', expandedIndex=null, suppressNextChange=false;
+const STANDALONE_SCROLL_BUFFER=40;
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function clearStandaloneScrollTails(){document.querySelectorAll('#hymns > .hymn').forEach(h=>h.style.removeProperty('--standalone-scroll-tail'))}
 function updateStandaloneScrollTail(hymn){
@@ -10,10 +11,10 @@ function updateStandaloneScrollTail(hymn){
  hymn.style.setProperty('--standalone-scroll-tail','0px');
  const title=hymn.querySelector('h2');
  if(!title)return;
- const viewportHeight=window.visualViewport?.height||window.innerHeight;
+ const viewportHeight=Math.max(window.innerHeight,document.documentElement.clientHeight,window.visualViewport?.height||0);
  const titleTop=title.getBoundingClientRect().top+window.scrollY;
  const documentHeight=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);
- const extra=Math.max(0,Math.ceil(titleTop+viewportHeight-8-documentHeight));
+ const extra=Math.max(0,Math.ceil(titleTop+viewportHeight-8-documentHeight+STANDALONE_SCROLL_BUFFER));
  hymn.style.setProperty('--standalone-scroll-tail',`${extra}px`);
 }
 function refreshStandaloneScrollTail(){if(mode==='hymn'&&current!==null)updateStandaloneScrollTail(document.getElementById(`hymn-${current}`))}
