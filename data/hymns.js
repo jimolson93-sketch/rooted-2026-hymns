@@ -5486,9 +5486,19 @@ window.ROOTED_HYMNS = [
       {
         "lines": [
           "By and by when I look on His face,\nBeautiful face, thorn-shadowed face;\nBy and by when I look on His face,\nI’ll wish I had given Him more",
-          "More, so much more —\nMore of my love than I e’er gave before.\nBy and by when I look on His face,\nI’ll wish I had given Him more.",
+          "More, so much more —\nMore of my love than I e’er gave before.\nBy and by when I look on His face,\nI’ll wish I had given Him more."
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "By and by when He holds out His hands,\nWelcoming hands, nail riven hands;\nBy and by when He holds out His hands,\nI’ll wish I had given Him more.",
-          "More, so much more,\nMore of my love than I e’er gave before,\nBy and by when He holds out His hands,\nI’ll wish I had given Him more.",
+          "More, so much more,\nMore of my love than I e’er gave before,\nBy and by when He holds out His hands,\nI’ll wish I had given Him more."
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "In the light of that heavenly place,\nLight from His face, beautiful face;\nIn the light of that heavenly place,\nI’ll wish I had given Him more.",
           "More, so much more,\nTreasures unbounded for Him I adore,\nBy and by when I look on His face,\nI’ll wish I had given Him more."
         ],
