@@ -3629,7 +3629,7 @@ window.ROOTED_HYMNS = [
           "Al - le - lu - ia",
           "Al - le - lu Al - le - lu - ia"
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
