@@ -2,14 +2,15 @@
 (()=>{
 const hymns=window.ROOTED_HYMNS||[];
 const el={search:document.getElementById('searchInput'),indexBtn:document.getElementById('indexBtn'),allBtn:document.getElementById('showAllBtn'),settingsBtn:document.getElementById('settingsBtn'),drawer:document.getElementById('settingsDrawer'),slider:document.getElementById('fontSizeSlider'),display:document.getElementById('fontSizeDisplay'),minus:document.getElementById('fontDecreaseBtn'),plus:document.getElementById('fontIncreaseBtn'),index:document.getElementById('index'),hymns:document.getElementById('hymns')};
-let current=null, mode='idle';
+let current=null, mode='idle', expandedIndex=null;
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function hymnBody(h){let vn=0;return h.stanzas.map(s=>{if(!s.chorus)vn++;return `<div class="stanza${s.chorus?' chorus':''}">`+s.lines.map((line,i)=>`<p class="line">${(!s.chorus&&i===0)?`<span class="verse-number">${vn}.</span>`:'<span class="verse-number"></span>'}<span class="line-text">${esc(line)}</span></p>`).join('')+'</div>'}).join('')}
 function render(){
- el.index.innerHTML=hymns.map(h=>`<a href="#hymn-${h.number}" data-num="${h.number}"><strong>${h.number}.</strong> ${esc(h.title)}</a>`).join('');
- el.hymns.innerHTML=hymns.map(h=>{let vn=0; const sts=h.stanzas.map(s=>{if(!s.chorus)vn++; return `<div class="stanza${s.chorus?' chorus':''}">`+s.lines.map((line,i)=>`<p class="line">${(!s.chorus&&i===0)?`<span class="verse-number">${vn}.</span>`:'<span class="verse-number"></span>'}<span class="line-text">${esc(line)}</span></p>`).join('')+'</div>'}).join(''); return `<article class="hymn" id="hymn-${h.number}" data-num="${h.number}"><h2>${h.number}. ${esc(h.title)}</h2>${sts}</article>`}).join('');
- el.index.addEventListener('click',e=>{const a=e.target.closest('a[data-num]');if(a){e.preventDefault();showHymn(+a.dataset.num)}})
+ el.index.innerHTML=hymns.map(h=>`<a href="#hymn-${h.number}" data-num="${h.number}" aria-expanded="false"><strong>${h.number}.</strong> ${esc(h.title)}</a><div class="index-hymn" data-num="${h.number}"><article class="hymn"><h2>${h.number}. ${esc(h.title)}</h2>${hymnBody(h)}</article></div>`).join('');
+ el.hymns.innerHTML=hymns.map(h=>`<article class="hymn" id="hymn-${h.number}" data-num="${h.number}"><h2>${h.number}. ${esc(h.title)}</h2>${hymnBody(h)}</article>`).join('');
+ el.index.addEventListener('click',e=>{const a=e.target.closest('a[data-num]');if(!a)return;e.preventDefault();const n=+a.dataset.num;const drawer=el.index.querySelector(`.index-hymn[data-num="${n}"]`);if(expandedIndex!==null){const oldLink=el.index.querySelector(`a[data-num="${expandedIndex}"]`);const oldDrawer=el.index.querySelector(`.index-hymn[data-num="${expandedIndex}"]`);oldLink.setAttribute('aria-expanded','false');oldDrawer.classList.remove('open')}if(expandedIndex===n){expandedIndex=null;return}drawer.classList.add('open');a.setAttribute('aria-expanded','true');expandedIndex=n})
 }
-function clearModes(){document.body.classList.remove('show-all-mode');el.index.classList.remove('show');document.querySelectorAll('.hymn.show').forEach(x=>x.classList.remove('show'));el.indexBtn.classList.remove('active');el.allBtn.classList.remove('active')}
+function clearModes(){document.body.classList.remove('show-all-mode');el.index.classList.remove('show');document.querySelectorAll('.hymn.show').forEach(x=>x.classList.remove('show'));document.querySelectorAll('.index-hymn.open').forEach(x=>x.classList.remove('open'));document.querySelectorAll('#index a[aria-expanded="true"]').forEach(x=>x.setAttribute('aria-expanded','false'));expandedIndex=null;el.indexBtn.classList.remove('active');el.allBtn.classList.remove('active')}
 function showIdle(){clearModes();mode='idle';current=null}
 function showIndex(){clearModes();mode='index';current=null;el.index.classList.add('show');el.indexBtn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 function showAll(){clearModes();mode='all';current=null;document.body.classList.add('show-all-mode');el.allBtn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
