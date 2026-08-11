@@ -2,7 +2,7 @@
 (()=>{
 const hymns=window.ROOTED_HYMNS||[];
 const el={search:document.getElementById('searchInput'),indexBtn:document.getElementById('indexBtn'),allBtn:document.getElementById('showAllBtn'),settingsBtn:document.getElementById('settingsBtn'),drawer:document.getElementById('settingsDrawer'),slider:document.getElementById('fontSizeSlider'),display:document.getElementById('fontSizeDisplay'),minus:document.getElementById('fontDecreaseBtn'),plus:document.getElementById('fontIncreaseBtn'),index:document.getElementById('index'),hymns:document.getElementById('hymns')};
-let current=null, mode='index';
+let current=null, mode='idle';
 function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function render(){
  el.index.innerHTML=hymns.map(h=>`<a href="#hymn-${h.number}" data-num="${h.number}"><strong>${h.number}.</strong> ${esc(h.title)}</a>`).join('');
@@ -18,5 +18,5 @@ el.search.addEventListener('input',()=>{if(/^\d+$/.test(el.search.value)){const 
 el.indexBtn.addEventListener('click',()=>{el.search.value='';showIndex()});el.allBtn.addEventListener('click',()=>{el.search.value='';showAll()});el.settingsBtn.addEventListener('click',()=>{const open=el.drawer.classList.toggle('open');el.settingsBtn.classList.toggle('active',open);el.drawer.setAttribute('aria-hidden',String(!open))});
 function setZoom(v){v=Math.max(60,Math.min(100,Math.round(v/5)*5));el.slider.value=v;el.display.textContent=v+'%';document.documentElement.style.setProperty('--hymn-scale',v/100);localStorage.setItem('rooted-hymn-size',String(v))}el.slider.addEventListener('input',()=>setZoom(+el.slider.value));el.minus.addEventListener('click',()=>setZoom(+el.slider.value-5));el.plus.addEventListener('click',()=>setZoom(+el.slider.value+5));
 let sx=0,sy=0;document.addEventListener('touchstart',e=>{if(e.touches.length===1){sx=e.touches[0].clientX;sy=e.touches[0].clientY}},{passive:true});document.addEventListener('touchend',e=>{if(mode!=='hymn'||!current)return;const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.25){if(dx<0&&current<hymns.length)showHymn(current+1);if(dx>0&&current>1)showHymn(current-1)}},{passive:true});
-render();setZoom(+(localStorage.getItem('rooted-hymn-size')||100));const m=location.hash.match(/^#hymn-(\d+)$/);m?showHymn(+m[1]):showIndex();
+render();setZoom(+(localStorage.getItem('rooted-hymn-size')||100));const m=location.hash.match(/^#hymn-(\d+)$/);if(m)showHymn(+m[1]);
 })();
