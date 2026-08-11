@@ -5,7 +5,9 @@
 
   const VERSION_KEY='rooted-deployed-version';
   const RELOAD_KEY='rooted-update-reload';
+  const CHECK_INTERVAL=60000;
   let hadController=!!navigator.serviceWorker.controller;
+  let checking=false;
 
   function showVersion(version){
     const label=document.getElementById('appVersion');
@@ -62,12 +64,29 @@
     }
   }
 
-  window.addEventListener('load',async function(){
+  async function runUpdateCheck(registration){
+    if(checking||document.visibilityState==='hidden')return;
+    checking=true;
     try{
-      const registration=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
       await registration.update();
       if(registration.waiting)registration.waiting.postMessage({type:'SKIP_WAITING'});
       await checkDeployment(registration);
+    }catch(_error){
+      // Offline or failed checks keep the currently working cache untouched.
+    }finally{
+      checking=false;
+    }
+  }
+
+  window.addEventListener('load',async function(){
+    try{
+      const registration=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
+      await runUpdateCheck(registration);
+      setInterval(function(){runUpdateCheck(registration);},CHECK_INTERVAL);
+      document.addEventListener('visibilitychange',function(){
+        if(document.visibilityState==='visible')runUpdateCheck(registration);
+      });
+      window.addEventListener('online',function(){runUpdateCheck(registration);});
     }catch(_error){
       // The site remains fully usable when registration or updating is unavailable.
     }
