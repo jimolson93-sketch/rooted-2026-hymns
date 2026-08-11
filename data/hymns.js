@@ -3736,7 +3736,7 @@ window.ROOTED_HYMNS = [
           "Where the angels wait to join us",
           "In Thy praise forevermore."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
