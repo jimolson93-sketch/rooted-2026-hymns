@@ -464,7 +464,12 @@ window.ROOTED_HYMNS = [
           "Crucified! crucified!",
           "And nailed upon the tree!",
           "With piercèd hands and feet and side!",
-          "For you! For me!",
+          "For you! For me!"
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
           "Upon His head a crown of thorns,",
           "Upon His heart my shame;",
           "For me He prayed, for me He died,",
@@ -477,7 +482,12 @@ window.ROOTED_HYMNS = [
           "Crucified! crucified!",
           "And nailed upon the tree!",
           "With piercèd hands and feet and side!",
-          "For you! For me!",
+          "For you! For me!"
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
           "\"Forgive him, O forgive!\" He cried,",
           "Then bowed His sacred head;",
           "O Lamb of God! my sacrifice!",
@@ -490,7 +500,12 @@ window.ROOTED_HYMNS = [
           "Crucified! crucified!",
           "And nailed upon the tree!",
           "With piercèd hands and feet and side!",
-          "For you! For me!",
+          "For you! For me!"
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
           "His voice I hear, His love I know;",
           "I worship at His feet;",
           "And kneeling there, at Calvary’s cross,",
@@ -505,7 +520,7 @@ window.ROOTED_HYMNS = [
           "With piercèd hands and feet and side!",
           "For you! For me!"
         ],
-        "chorus": false
+        "chorus": true
       }
     ]
   },
@@ -1708,8 +1723,10 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Yes, Jesus loves me! Yes, Jesus loves me!",
-          "Yes, Jesus loves me! The Bible tells me so."
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "The Bible tells me so."
         ],
         "chorus": true
       },
@@ -1724,8 +1741,10 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Yes, Jesus loves me! Yes, Jesus loves me!",
-          "Yes, Jesus loves me! The Bible tells me so."
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "The Bible tells me so."
         ],
         "chorus": true
       },
@@ -1740,8 +1759,10 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Yes, Jesus loves me! Yes, Jesus loves me!",
-          "Yes, Jesus loves me! The Bible tells me so."
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "The Bible tells me so."
         ],
         "chorus": true
       },
@@ -1756,8 +1777,10 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Yes, Jesus loves me! Yes, Jesus loves me!",
-          "Yes, Jesus loves me! The Bible tells me so."
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "Yes, Jesus loves me!",
+          "The Bible tells me so."
         ],
         "chorus": true
       }
@@ -3516,14 +3539,9 @@ window.ROOTED_HYMNS = [
     "stanzas": [
       {
         "lines": [
-          "You are my strength when I am weak",
-          "You are the treasure that I seek",
-          "You are my all in all"
-        ],
-        "chorus": false
-      },
-      {
-        "lines": [
+         "You are my strength when I am weak",
+         "You are the treasure that I seek",
+          "You are my all in all",
           "Seeking You as a precious jewel",
           "Lord, to give up I'd be a fool",
           "You are my all in all"
@@ -3541,14 +3559,9 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Taking my sin, my cross, my shame",
-          "Rising again I bless Your name",
-          "You are my all in all"
-        ],
-        "chorus": false
-      },
-      {
-        "lines": [
+         "Taking my sin, my cross, my shame",
+         "Rising again I bless Your name",
+          "You are my all in all",
           "When I fall down You pick me up",
           "When I am dry You fill my cup",
           "You are my all in all"
