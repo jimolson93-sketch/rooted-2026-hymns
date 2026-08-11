@@ -1,0 +1,10 @@
+{
+  "name": "Rooted 2026 Hymns",
+  "short_name": "Rooted Hymns",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#747d72",
+  "description": "Rooted 2026 Hymns"
+}

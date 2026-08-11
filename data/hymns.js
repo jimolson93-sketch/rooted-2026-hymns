@@ -1571,7 +1571,7 @@ window.ROOTED_HYMNS = [
         "lines": [
           "When peace, like a river, attendeth my way,",
           "When sorrows like sea billows roll;",
-          "Whatever my lot, Thou has taught me to say,",
+          "Whatever my lot, Thou hast taught me to say,",
           "It is well, it is well, with my soul."
         ],
         "chorus": false
@@ -3446,7 +3446,7 @@ window.ROOTED_HYMNS = [
       {
         "lines": [
           "Thorny was the crown that He wore,",
-          "And the cross His body over came;",
+          "And the cross His body o’ercame;",
           "Grievous were the sorrows He bore,",
           "But He suffered thus not in vain.",
           "May I to that fountain be led,",
@@ -3827,7 +3827,7 @@ window.ROOTED_HYMNS = [
           "I may never march in the infantry, Ride in the cavalry, Shoot the artillery.",
           "I may never fly o’er the enemy, But I’m in the Lord’s army. (yes, sir!)",
           "I’m in the Lord’s army, (yes, sir!) I’m in the Lord’s army, (yes, sir!)",
-          "I may never march in the infantry, Ride in the Calvary, Shoot the artillery.",
+          "I may never march in the infantry, Ride in the cavalry, Shoot the artillery.",
           "I may never fly o’er the enemy, But I’m in the Lord’s army. (yes, sir!)"
         ],
         "chorus": false
@@ -3836,10 +3836,10 @@ window.ROOTED_HYMNS = [
         "lines": [
           "Mexico",
           "I may never take a trip to Mexico, Ride a donkey oh so slow, eat a cheesy taco,",
-          "I may never wear a big sombrero, but I’m in the Lords army (Si senor!)",
-          "I’m in the Lords army (Si senor!) I’m in the Lords army (Si senor!)",
+          "I may never wear a big sombrero, but I’m in the Lord’s army (Si senor!)",
+          "I’m in the Lord’s army (Si senor!) I’m in the Lord’s army (Si senor!)",
           "I may never take a trip to Mexico, Ride a donkey oh so slow, eat a cheesy taco,",
-          "I may never wear a big sombrero, but I’m in the Lords army (Si senor!)"
+          "I may never wear a big sombrero, but I’m in the Lord’s army (Si senor!)"
         ],
         "chorus": false
       },
@@ -3847,10 +3847,10 @@ window.ROOTED_HYMNS = [
         "lines": [
           "Africa",
           "I may never in Africa abide, Be a Safari guide, Go on an elephant ride,",
-          "I may never shoot me a Rhino Hide, But I’m in the Lords army! (Pound Chest)",
-          "I’m in the Lord’s army! (Pound Chest) I’m in the Lords army! (Pound Chest)",
+          "I may never shoot me a Rhino Hide, But I’m in the Lord’s army! (Pound Chest)",
+          "I’m in the Lord’s army! (Pound Chest) I’m in the Lord’s army! (Pound Chest)",
           "I may never in Africa abide, Be a Safari guide, Go on an elephant ride,",
-          "I may never shoot me a Rhino Hide, But I’m in the Lords army! (Pound Chest)"
+          "I may never shoot me a Rhino Hide, But I’m in the Lord’s army! (Pound Chest)"
         ],
         "chorus": false
       },
@@ -4097,8 +4097,8 @@ window.ROOTED_HYMNS = [
           "Jesus completely saves",
           "He will lift you by his love",
           "Out of the angry waves",
-          "But the master of the sea",
-          "Billows his will obey",
+          "He’s the Master of the sea,",
+          "Billows His will obey;",
           "He your savior wants to be",
           "Be saved today"
         ],
@@ -4248,7 +4248,7 @@ window.ROOTED_HYMNS = [
         "lines": [
           "And when the bright morn of Thy glory shall come,",
           "And the children ascend to the Father’s glad home,",
-          "I`ll shout, with Thy likeness impressed on my brow,",
+          "I’ll shout, with Thy likeness impressed on my brow,",
           "’Tis Thou who art worthy, Lord Jesus, ’tis Thou."
         ],
         "chorus": false
@@ -4396,7 +4396,7 @@ window.ROOTED_HYMNS = [
           "Will your eyes behold through the morning light",
           "The city of gold, and the harbour bright?",
           "Will you anchor safe by the heavenly shore",
-          "When life`s storms are past for evermore?"
+          "When life’s storms are past for evermore?"
         ],
         "chorus": false
       },
@@ -5061,7 +5061,7 @@ window.ROOTED_HYMNS = [
           "I’m satisfied with just a cottage below",
           "A little silver and a little gold",
           "But in that city where the ransomed will shine",
-          "I want a gold one that silver lined"
+          "I want a gold one that’s silver lined"
         ],
         "chorus": false
       },
@@ -5390,7 +5390,7 @@ window.ROOTED_HYMNS = [
         "lines": [
           "O that with yonder sacred throng",
           "We at His feet may fall",
-          "We at at His feet may fall;",
+          "We at His feet may fall;",
           "Join in the everlasting song,"
         ],
         "chorus": false
@@ -6011,7 +6011,7 @@ window.ROOTED_HYMNS = [
   },
   {
     "number": 103,
-    "title": "Jesus Love is Very Wonderful",
+    "title": "Jesus’ Love Is Very Wonderful",
     "stanzas": [
       {
         "lines": [
@@ -6647,7 +6647,7 @@ window.ROOTED_HYMNS = [
         "lines": [
           "Allelujah, allelujah,",
           "Allelujah for the cross!",
-          "Allelujah, alleluja!",
+          "Allelujah, allelujah!",
           "It shall never suffer loss!"
         ],
         "chorus": false,
