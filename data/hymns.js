@@ -1648,7 +1648,12 @@ window.ROOTED_HYMNS = [
           "No name else is given,",
           "Search through earth and heaven.",
           "Jesus alone, Jesus alone, Jesus alone can save.",
-          "Jesus alone, Jesus alone, Jesus alone can save.",
+          "Jesus alone, Jesus alone, Jesus alone can save."
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "Tender were His works of grace,",
           "Jesus alone can save;",
           "Wheresoever His steps we trace,",
