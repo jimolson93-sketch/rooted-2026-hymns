@@ -5970,7 +5970,7 @@ window.ROOTED_HYMNS = [
           "Altogether worthy",
           "Altogether wonderful to me"
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
