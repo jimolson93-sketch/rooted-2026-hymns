@@ -1,14 +1,14 @@
 'use strict';
 
 const CACHE_PREFIX='rooted-hymns-';
-const CACHE_VERSION='2026.08.11.3';
+const CACHE_VERSION='2026.08.11.5';
 const APP_FILES=[
   './',
   './index.html',
   './manifest.webmanifest',
-  './css/styles.css?v=20260811-2',
+  './css/styles.css?v=20260811-4',
   './data/hymns.js?v=20260811-3',
-  './js/app.js?v=20260811-2',
+  './js/app.js?v=20260811-3',
   './js/reading-enhancements.js?v=20260810-3',
   './js/update.js?v=20260811',
   './version.json'

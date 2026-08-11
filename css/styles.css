@@ -69,7 +69,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:14px}
   box-shadow:0 0 0 3px rgba(96,104,95,.18),0 3px 8px rgba(96,104,95,.18);
 }
 #settingsBtn.active{
-  transform:rotate(30deg);
+  transform:rotate(10deg);
   box-shadow:0 0 0 3px rgba(96,104,95,.20);
 }
 .settings-drawer{
@@ -137,7 +137,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:14px}
   display:none;
   max-width:700px;
   margin:0 auto;
-  padding:8px 2px 28px;
+  padding:8px 2px calc(28px + var(--standalone-scroll-tail, 0px));
   font-size:calc(1.5em * var(--hymn-scale));
   text-align:left;
 }
