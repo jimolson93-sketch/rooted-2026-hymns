@@ -144,6 +144,7 @@ header{display:flex;flex-direction:column;align-items:center;gap:14px}
 .hymn.show{display:block}
 .hymn h2{margin:0 0 18px;font-size:1.2em;text-align:center}
 .stanza{margin:0 0 1.45em}
+.stanza.medley-section{margin-bottom:1.65em}
 .stanza.chorus{margin-left:2.2em;color:var(--muted)}
 .line{display:flex;align-items:flex-start;gap:7px;margin:0 0 3px;line-height:1.4}
 .verse-number{width:24px;min-width:24px;text-align:right;font-weight:700;color:var(--muted)}

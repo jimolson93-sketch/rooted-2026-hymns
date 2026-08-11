@@ -2094,7 +2094,7 @@ window.ROOTED_HYMNS = [
           "My Redeemer, my Redeemer,",
           "Thou hast my salvation wrought."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -2112,7 +2112,7 @@ window.ROOTED_HYMNS = [
           "My Redeemer, my Redeemer,",
           "Plucked me as a brand from hell."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -2130,7 +2130,7 @@ window.ROOTED_HYMNS = [
           "My Redeemer, my Redeemer,",
           "Oh, how sweet to call Thee mine!"
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -2148,7 +2148,7 @@ window.ROOTED_HYMNS = [
           "My Redeemer, my Redeemer",
           "Then shall hear me shout His praise."
         ],
-        "chorus": false
+        "chorus": true
       }
     ]
   },
@@ -3730,7 +3730,7 @@ window.ROOTED_HYMNS = [
     "stanzas": [
       {
         "lines": [
-          "1 Life is like a mountain railroad,",
+          "Life is like a mountain railroad,",
           "With an engineer that’s brave;",
           "We must make the run successful",
           "From the cradle to the grave;",
@@ -3743,7 +3743,6 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "Refrain:",
           "Blessed Savior, Thou wilt guide us,",
           "Till we reach the blissful shore,",
           "Where the angels wait to join us",
@@ -3753,42 +3752,69 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "2 You will roll up grades of trial,",
+          "You will roll up grades of trial,",
           "You will cross the bridge of strife;",
           "See that Christ is your conductor",
           "On this lightning train of life;",
           "Always mindful of obstruction,",
           "Do your duty, never fail;",
           "Keep your hand upon the throttle,",
-          "And your eye upon the rail. [Refrain]"
+          "And your eye upon the rail."
         ],
         "chorus": false
       },
       {
         "lines": [
-          "3 You will often find obstructions,",
+          "Blessed Savior, Thou wilt guide us,",
+          "Till we reach the blissful shore,",
+          "Where the angels wait to join us",
+          "In Thy praise forevermore."
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
+          "You will often find obstructions,",
           "Look for storms and wind and rain;",
           "On a fill or curve or trestle,",
           "They will almost ditch your train;",
           "Put your trust alone in Jesus;",
           "Never falter, never fail;",
           "Keep your hand upon the throttle,",
-          "And your eye upon the rail. [Refrain]"
+          "And your eye upon the rail."
         ],
         "chorus": false
       },
       {
         "lines": [
-          "4 As you roll across the trestle,",
+          "Blessed Savior, Thou wilt guide us,",
+          "Till we reach the blissful shore,",
+          "Where the angels wait to join us",
+          "In Thy praise forevermore."
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
+          "As you roll across the trestle,",
           "Spanning Jordan’s swelling tide;",
           "You behold the Union Depot",
           "Into which your train will glide;",
           "There you’ll meet the Sup’rintendent,",
           "God the Father, God the Son,",
           "With the hearty, joyous plaudit,",
-          "“Weary pilgrim, welcome home.” [Refrain]"
+          "“Weary pilgrim, welcome home.”"
         ],
         "chorus": false
+      },
+      {
+        "lines": [
+          "Blessed Savior, Thou wilt guide us,",
+          "Till we reach the blissful shore,",
+          "Where the angels wait to join us",
+          "In Thy praise forevermore."
+        ],
+        "chorus": true
       }
     ]
   },
@@ -4898,11 +4924,16 @@ window.ROOTED_HYMNS = [
           "The Lily of the Valley, in Him alone I see,",
           "All I need to cleanse and make me fully whole;",
           "In sorrow He’s my comfort, in trouble He’s my stay;",
-          "He tells me every care on Him to roll.",
+          "He tells me every care on Him to roll."
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "He’s the Lily of the Valley, The Bright and Morning Star;",
           "He’s the fairest of ten thousand to my soul."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -4912,11 +4943,16 @@ window.ROOTED_HYMNS = [
           "From my heart and now He keeps me by His power.",
           "Though all the world forsake me,",
           "And Satan tempt me sore,",
-          "Through Jesus I shall safely reach the goal;",
+          "Through Jesus I shall safely reach the goal;"
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "He’s the Lily of the Valley, The Bright and Morning Star;",
           "He’s the fairest of ten thousand to my soul."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -4925,11 +4961,16 @@ window.ROOTED_HYMNS = [
           "A wall of fire about me, I’ve nothing now to fear:",
           "From His manna He my hungry soul shall fill.",
           "Then sweeping up to glory to see His blessèd face,",
-          "Where rivers of delight shall ever roll;",
+          "Where rivers of delight shall ever roll;"
+        ],
+        "chorus": false
+      },
+      {
+        "lines": [
           "He’s the Lily of the Valley, The Bright and Morning Star;",
           "He’s the fairest of ten thousand to my soul."
         ],
-        "chorus": false
+        "chorus": true
       }
     ]
   },
@@ -5498,24 +5539,57 @@ window.ROOTED_HYMNS = [
     "stanzas": [
       {
         "lines": [
-          "By and by when I look on His face,\nBeautiful face, thorn-shadowed face;\nBy and by when I look on His face,\nI’ll wish I had given Him more",
-          "More, so much more —\nMore of my love than I e’er gave before.\nBy and by when I look on His face,\nI’ll wish I had given Him more."
+          "By and by when I look on His face,",
+          "Beautiful face, thorn-shadowed face;",
+          "By and by when I look on His face,",
+          "I’ll wish I had given Him more"
         ],
         "chorus": false
       },
       {
         "lines": [
-          "By and by when He holds out His hands,\nWelcoming hands, nail riven hands;\nBy and by when He holds out His hands,\nI’ll wish I had given Him more.",
-          "More, so much more,\nMore of my love than I e’er gave before,\nBy and by when He holds out His hands,\nI’ll wish I had given Him more."
+          "More, so much more —",
+          "More of my love than I e’er gave before.",
+          "By and by when I look on His face,",
+          "I’ll wish I had given Him more."
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
+          "By and by when He holds out His hands,",
+          "Welcoming hands, nail riven hands;",
+          "By and by when He holds out His hands,",
+          "I’ll wish I had given Him more."
         ],
         "chorus": false
       },
       {
         "lines": [
-          "In the light of that heavenly place,\nLight from His face, beautiful face;\nIn the light of that heavenly place,\nI’ll wish I had given Him more.",
-          "More, so much more,\nTreasures unbounded for Him I adore,\nBy and by when I look on His face,\nI’ll wish I had given Him more."
+          "More, so much more,",
+          "More of my love than I e’er gave before,",
+          "By and by when He holds out His hands,",
+          "I’ll wish I had given Him more."
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
+          "In the light of that heavenly place,",
+          "Light from His face, beautiful face;",
+          "In the light of that heavenly place,",
+          "I’ll wish I had given Him more."
         ],
         "chorus": false
+      },
+      {
+        "lines": [
+          "More, so much more,",
+          "Treasures unbounded for Him I adore,",
+          "By and by when I look on His face,",
+          "I’ll wish I had given Him more."
+        ],
+        "chorus": true
       }
     ]
   },
@@ -6462,7 +6536,7 @@ window.ROOTED_HYMNS = [
           "Sometimes we dream together of how it will be",
           "when we all get to Heaven, God’s family."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -6477,11 +6551,10 @@ window.ROOTED_HYMNS = [
         "lines": [
           "And sometimes we laugh together, sometimes we cry",
           "Sometimes we share together heartaches and sorrows",
-          "Sometimes we dream together of how it will",
-          "be",
+          "Sometimes we dream together of how it will be",
           "when we all get to Heaven, God’s family."
         ],
-        "chorus": false
+        "chorus": true
       },
       {
         "lines": [
@@ -6491,6 +6564,15 @@ window.ROOTED_HYMNS = [
           "Together forever, God’s family."
         ],
         "chorus": false
+      },
+      {
+        "lines": [
+          "And sometimes we laugh together, sometimes we cry",
+          "Sometimes we share together heartaches and sorrows",
+          "Sometimes we dream together of how it will be",
+          "when we all get to Heaven, God’s family."
+        ],
+        "chorus": true
       }
     ]
   },
@@ -6555,11 +6637,25 @@ window.ROOTED_HYMNS = [
           "Where I first saw the light,",
           "And the burden of my heart rolled away,",
           "It was there by faith I received my sight,",
-          "And now I am happy all the day.",
+          "And now I am happy all the day."
+        ],
+        "chorus": false,
+        "unnumbered": true,
+        "medley": true
+      },
+      {
+        "lines": [
           "Allelujah, allelujah,",
           "Allelujah for the cross!",
           "Allelujah, alleluja!",
-          "It shall never suffer loss!",
+          "It shall never suffer loss!"
+        ],
+        "chorus": false,
+        "unnumbered": true,
+        "medley": true
+      },
+      {
+        "lines": [
           "By and by we're going to see the King,",
           "By and by we're going to see the King,",
           "By and by we're going to see the King",
@@ -6567,14 +6663,28 @@ window.ROOTED_HYMNS = [
           "And crown Him Lord of all,",
           "And Crown Him Lord of all,",
           "And Crown Him Lord of all,",
-          "And Crown Him Lord of all!",
+          "And Crown Him Lord of all!"
+        ],
+        "chorus": false,
+        "unnumbered": true,
+        "medley": true
+      },
+      {
+        "lines": [
           "Away over Jordan with my blessed Savior",
           "Away over Jordan to wear a starry crown",
           "Bright crown, starry crown,",
           "Bright crown of victory.",
           "Shall you, shall I,",
           "Wear a crown of victory,",
-          "Wear a crown of victory.",
+          "Wear a crown of victory."
+        ],
+        "chorus": false,
+        "unnumbered": true,
+        "medley": true
+      },
+      {
+        "lines": [
           "We’re going to spend eternity,",
           "Singing around the throne,",
           "Singing around the throne,",
@@ -6583,7 +6693,9 @@ window.ROOTED_HYMNS = [
           "Singing around the throne",
           "In the New Jerusalem"
         ],
-        "chorus": false
+        "chorus": false,
+        "unnumbered": true,
+        "medley": true
       }
     ]
   },
