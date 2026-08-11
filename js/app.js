@@ -18,7 +18,7 @@ function updateStandaloneScrollTail(hymn){
  hymn.style.setProperty('--standalone-scroll-tail',`${extra}px`);
 }
 function refreshStandaloneScrollTail(){if(mode==='hymn'&&current!==null)updateStandaloneScrollTail(document.getElementById(`hymn-${current}`))}
-function hymnBody(h){let vn=0;return h.stanzas.map(s=>{if(!s.chorus&&!s.unnumbered)vn++;return `<div class="stanza${s.chorus?' chorus':''}${s.medley?' medley-section':''}">`+s.lines.map((line,i)=>`<p class="line">${(!s.chorus&&!s.unnumbered&&i===0)?`<span class="verse-number">${vn}.</span>`:'<span class="verse-number"></span>'}<span class="line-text">${esc(line)}</span></p>`).join('')+'</div>'}).join('')}
+function hymnBody(h){let vn=0;return h.stanzas.map(s=>{if(!s.chorus&&!s.unnumbered)vn++;return `<div class="stanza${s.chorus?' chorus':''}${s.bridge?' bridge':''}${s.medley?' medley-section':''}">`+s.lines.map((line,i)=>`<p class="line">${(!s.chorus&&!s.unnumbered&&i===0)?`<span class="verse-number">${vn}.</span>`:'<span class="verse-number"></span>'}<span class="line-text">${esc(line)}</span></p>`).join('')+'</div>'}).join('')}
 function render(){
  el.index.innerHTML=hymns.map(h=>`<a href="#hymn-${h.number}" data-num="${h.number}" aria-expanded="false"><strong>${h.number}.</strong> ${esc(h.title)}</a><div class="index-hymn" data-num="${h.number}" role="region" aria-label="${h.number}. ${esc(h.title)}"><article class="hymn">${hymnBody(h)}</article></div>`).join('');
  el.hymns.innerHTML=hymns.map(h=>`<article class="hymn" id="hymn-${h.number}" data-num="${h.number}"><h2>${h.number}. ${esc(h.title)}</h2>${hymnBody(h)}</article>`).join('');

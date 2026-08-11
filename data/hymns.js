@@ -5771,10 +5771,10 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
-          "He's the Cornerstone",
-          "He's the great I Am",
-          "He's the Lord of lords",
-          "Who will come again"
+          "He's the Prince of peace",
+          "He's the Bread of life",
+          "He's the Lamb of God",
+          "Who was sacrificed"
         ],
         "chorus": false
       },
@@ -5793,14 +5793,16 @@ window.ROOTED_HYMNS = [
           "For all He is",
           "I give Him praise"
         ],
-        "chorus": false
+        "chorus": false,
+        "unnumbered": true,
+        "bridge": true
       },
       {
         "lines": [
-          "He's the Prince of peace",
-          "He's the Bread of life",
-          "He's the Lamb of God",
-          "Who was sacrificed"
+          "He's the Cornerstone",
+          "He's the great I Am",
+          "He's the Lord of lords",
+          "Who will come again"
         ],
         "chorus": false
       },
@@ -6110,7 +6112,9 @@ window.ROOTED_HYMNS = [
           "I'll never know how much it cost",
           "To see my sin upon that cross"
         ],
-        "chorus": false
+        "chorus": false,
+        "unnumbered": true,
+        "bridge": true
       },
       {
         "lines": [
