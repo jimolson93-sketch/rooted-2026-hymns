@@ -3655,12 +3655,30 @@ window.ROOTED_HYMNS = [
       },
       {
         "lines": [
+          "Al - le - lu - ia",
+          "Al - le - lu - ia",
+          "Al - le - lu - ia",
+          "Al - le - lu Al - le - lu - ia"
+        ],
+        "chorus": true
+      },
+      {
+        "lines": [
           "Man shall not live by bread alone,",
           "But by every word",
           "That proceeds out from the mouth of God.",
           "Allelu Alleluia"
         ],
         "chorus": false
+      },
+      {
+        "lines": [
+          "Al - le - lu - ia",
+          "Al - le - lu - ia",
+          "Al - le - lu - ia",
+          "Al - le - lu Al - le - lu - ia"
+        ],
+        "chorus": true
       }
     ]
   },
@@ -6594,7 +6612,7 @@ window.ROOTED_HYMNS = [
           "You raise me up, so I can stand on mountains;",
           "You raise me up, to walk on stormy seas;",
           "I am strong, when I am on your shoulders;",
-          "You raise me up… To more than I can be."
+          "You raise me up to more than I can be."
         ],
         "chorus": true
       },
@@ -6612,16 +6630,7 @@ window.ROOTED_HYMNS = [
           "You raise me up, so I can stand on mountains;",
           "You raise me up, to walk on stormy seas;",
           "I am strong, when I am on your shoulders;",
-          "You raise me up… To more than I can be."
-        ],
-        "chorus": true
-      },
-      {
-        "lines": [
-          "You raise me up, so I can stand on mountains;",
-          "You raise me up, to walk on stormy seas;",
-          "I am strong, when I am on your shoulders;",
-          "You raise me up… To more than I can be."
+          "You raise me up to more than I can be."
         ],
         "chorus": true
       }
