@@ -2,7 +2,6 @@
   const SWIPE_START_X = 18;
   const SWIPE_RATIO = 1.35;
   const COMMIT_RATIO = 0.45;
-  const TOP_TOLERANCE = 30;
   const SETTLE_MS = 160;
   const SWIPE_FADE = 0.08;
 
@@ -15,7 +14,6 @@
   let nextPanel = null;
   let swipeDirection = 0;
   let horizontalGesture = false;
-  let startedAtHymnTop = false;
   let originalSearchValue = '';
 
   function visibleSingleHymn() {
@@ -97,7 +95,6 @@
     adjacentHymn = null;
     swipeDirection = 0;
     horizontalGesture = false;
-    startedAtHymnTop = false;
   }
 
   function settleSwipe(commit) {
@@ -148,17 +145,14 @@
       return;
     }
 
-    const title = hymn.querySelector('h2') || hymn;
-    const hymnTop = title.getBoundingClientRect().top + window.pageYOffset - 8;
     touchStartX = event.touches[0].clientX;
     touchStartY = event.touches[0].clientY;
     touchHymn = hymn;
-    startedAtHymnTop = window.pageYOffset <= hymnTop + TOP_TOLERANCE;
     originalSearchValue = document.getElementById('searchInput')?.value || hymnNumber(hymn);
   }
 
   function handleTouchMove(event) {
-    if (!touchHymn || !startedAtHymnTop || event.touches.length !== 1) return;
+    if (!touchHymn || event.touches.length !== 1) return;
     const dx = event.touches[0].clientX - touchStartX;
     const dy = event.touches[0].clientY - touchStartY;
     const absX = Math.abs(dx);
