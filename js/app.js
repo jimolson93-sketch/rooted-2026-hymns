@@ -5,7 +5,7 @@ const el={search:document.getElementById('searchInput'),indexBtn:document.getEle
 let current=null, mode='idle', expandedIndex=null, suppressNextChange=false;
 const STANDALONE_SCROLL_BUFFER=40;
 const ALL_HYMNS_TOP_THRESHOLD=420;
-function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[m]))}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function createAllHymnsTopButton(){
  const style=document.createElement('style');
  style.textContent=`#allHymnsTopBtn{position:fixed;right:max(4px,calc(env(safe-area-inset-right) - 8px));bottom:calc(6px + env(safe-area-inset-bottom));z-index:30;width:60px;height:60px;border:0;background:transparent;color:#fff;font:700 24px/1 system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .16s ease,transform .16s ease,visibility .16s ease;-webkit-tap-highlight-color:transparent;isolation:isolate}#allHymnsTopBtn::before{content:"";position:absolute;inset:8px;border:1px solid rgba(96,104,95,.42);border-radius:50%;background:rgba(96,104,95,.92);box-shadow:0 4px 14px rgba(35,40,34,.22);z-index:-1;transition:transform .12s ease}#allHymnsTopBtn.visible{opacity:.94;visibility:visible;transform:translateY(0)}#allHymnsTopBtn:active::before{transform:scale(.96)}@media(min-width:701px){#allHymnsTopBtn{right:max(10px,calc(env(safe-area-inset-right) - 8px));bottom:calc(10px + env(safe-area-inset-bottom))}}@media(prefers-reduced-motion:reduce){#allHymnsTopBtn{transition:none}#allHymnsTopBtn::before{transition:none}}`;
