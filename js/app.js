@@ -7,7 +7,7 @@ let current=null,mode='idle',expandedIndex=null,suppressNextChange=false,searchM
 let searchModeBtn=null,searchResults=null;
 const STANDALONE_SCROLL_BUFFER=40;
 const ALL_HYMNS_TOP_THRESHOLD=420;
-function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[m]))}
 function escapeRegex(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 function createAllHymnsTopButton(){
  const style=document.createElement('style');
@@ -36,7 +36,7 @@ function applySearchModeUI(){
  if(!ENABLE_TEXT_SEARCH||!searchModeBtn)return;
  const words=searchMode==='text';
  searchModeBtn.textContent=words?'ABC':'#';searchModeBtn.classList.toggle('words',words);searchModeBtn.setAttribute('aria-label',words?'Switch to hymn number search':'Switch to word search');searchModeBtn.title=words?'Switch to hymn number search':'Switch to word search';
- el.search.placeholder=words?'Search words…':'Go to hymn…';el.search.setAttribute('inputmode',words?'text':'numeric');el.search.setAttribute('enterkeyhint',words?'search':'done');el.search.setAttribute('aria-label',words?'Search hymn titles and lyrics':'Go to hymn');el.search.autocomplete='off';el.search.spellcheck=false;
+ el.search.placeholder=words?'Search words or number…':'Go to hymn…';el.search.setAttribute('inputmode',words?'text':'numeric');el.search.setAttribute('enterkeyhint',words?'search':'done');el.search.setAttribute('aria-label',words?'Search hymn titles, lyrics, or hymn number':'Go to hymn');el.search.autocomplete='off';el.search.spellcheck=false;
  if(words){el.search.removeAttribute('pattern');el.search.setAttribute('autocapitalize','none')}else{el.search.setAttribute('pattern','[0-9]*');el.search.removeAttribute('autocapitalize')}
 }
 function setSearchMode(next,{focus=false,reset=true}={}){
@@ -63,7 +63,14 @@ function findTextMatches(query){
 }
 function clearSearchResults(){if(searchResults){searchResults.classList.remove('show');searchResults.innerHTML=''}}
 function renderTextSearchResults(query){
- if(!ENABLE_TEXT_SEARCH||searchMode!=='text')return;const q=normalizeSearchText(query);
+ if(!ENABLE_TEXT_SEARCH||searchMode!=='text')return;const raw=query.trim();const q=normalizeSearchText(query);
+ if(!raw){showIdle();return}
+ if(/^\d+$/.test(raw)){
+  const n=Number(raw);const hymn=hymns.find(h=>h.number===n);clearModes();mode='search';current=null;
+  const summary=hymn?`1 result for “${esc(raw)}”`:`No exact hymn for “${esc(raw)}”`;
+  searchResults.innerHTML=`<div class="search-results-summary">${summary}</div>`+(hymn?`<button type="button" class="search-result" data-num="${hymn.number}" aria-label="Open hymn ${hymn.number}, ${esc(hymn.title)}"><span class="search-result-title"><mark>${hymn.number}</mark>. ${esc(hymn.title)}</span><span class="search-result-title-match">Hymn number match</span></button>`:`<div class="search-results-empty">No hymn found with that number.</div>`);
+  searchResults.classList.add('show');updateAllHymnsTopButton();return;
+ }
  if(q.length<2){showIdle();return}
  const matches=findTextMatches(query);clearModes();mode='search';current=null;
  const summary=`${matches.length} result${matches.length===1?'':'s'} for “${esc(query.trim())}”`;
