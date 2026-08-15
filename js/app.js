@@ -7,7 +7,7 @@ let current=null,mode='idle',expandedIndex=null,suppressNextChange=false,searchM
 let searchModeBtn=null,searchResults=null;
 const STANDALONE_SCROLL_BUFFER=40;
 const ALL_HYMNS_TOP_THRESHOLD=420;
-function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[m]))}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function escapeRegex(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 function createAllHymnsTopButton(){
  const style=document.createElement('style');
